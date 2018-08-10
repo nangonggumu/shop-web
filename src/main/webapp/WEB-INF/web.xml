@@ -1,0 +1,51 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+
+  <servlet>
+    <servlet-name>servletTest</servlet-name>
+    <servlet-class>com.zhangqiang.web.controller.ServletTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servletTest</servlet-name>
+    <url-pattern>/abc</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.zhangqiang.web.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/aaa</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>com.zhangqiang.web.controller.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/download</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CodeServlet</servlet-name>
+    <servlet-class>com.zhangqiang.web.controller.CodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CodeServlet</servlet-name>
+    <url-pattern>/CodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Input</servlet-name>
+    <servlet-class>com.zhangqiang.web.controller.Input</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Input</servlet-name>
+    <url-pattern>/input</url-pattern>
+  </servlet-mapping>
+
+</web-app>
