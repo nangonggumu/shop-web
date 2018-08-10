@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{[%d{HH:mm:ss.SSS}][%-5level]%X{traceId}%X{requestStr} %c{1.}-%m%n%throwable}{TRACE=blue}"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <AsyncLogger name="druid.sql.Statement" level="DEBUG" includeLocation="true" additivity="false">
+            <AppenderRef ref="Console"/>
+        </AsyncLogger>
+        <AsyncRoot level="INFO" includeLocation="true">
+            <AppenderRef ref="Console"/>
+        </AsyncRoot>
+    </Loggers>
+</Configuration>
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+        <!--<Configuration status="INFO">-->
+
+        <!--<properties>-->
+        <!--<property name="PROJECT_NAME" value="shop-web"/>-->
+        <!--<property name="LOG_HOME" value="/Users/yoho8/Desktop/logs/${PROJECT_NAME}"/>-->
+        <!--</properties>-->
+        <!--<Appenders>-->
+        <!--<RollingRandomAccessFile name="rollingFile"-->
+        <!--fileName="${LOG_HOME}/${PROJECT_NAME}.log"-->
+        <!--filePattern="${LOG_HOME}/${PROJECT_NAME}.%d{yyyy-MM-dd}-%i.log.gz">-->
+        <!--<PatternLayout-->
+        <!--pattern="%highlight{[%d{HH:mm:ss.SSS}][%-5level]%X{traceId}%X{requestStr} %c{1.}-%m%n%throwable}{TRACE=blue}"/>-->
+        <!--<Policies>-->
+        <!--<TimeBasedTriggeringPolicy interval="1"/>-->
+        <!--<SizeBasedTriggeringPolicy size="800 MB"/>-->
+        <!--</Policies>-->
+        <!--<DefaultRolloverStrategy max="5"/>-->
+        <!--</RollingRandomAccessFile>-->
+        <!--</Appenders>-->
+        <!--<Loggers>-->
+        <!--<AsyncLogger name="com.zhangqiang" level="DEBUG" includeLocation="true" additivity="false">-->
+        <!--<AppenderRef ref="rollingFile"/>-->
+        <!--</AsyncLogger>-->
+        <!--<AsyncLogger name="com.zhangqiang.shop.dao" level="DEBUG" additivity="false">-->
+        <!--<appender-ref ref="rollingFile"/>-->
+        <!--</AsyncLogger>-->
+        <!--<AsyncRoot level="INFO" includeLocation="true">-->
+        <!--<AppenderRef ref="rollingFile"/>-->
+        <!--</AsyncRoot>-->
+        <!--</Loggers>-->
+        <!--</Configuration>-->
+
+
